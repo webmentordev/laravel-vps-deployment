@@ -1,0 +1,25 @@
+Create VPS (DigitalOcean recommended)
+Update Linux Packages
+Setup Domain DNS Records
+Install nginx
+Install Docker
+Create docker-compose file (MySQL & PHPMyAdmin)
+Install composer
+(No need to Install NodeJS)
+Upload laravel files
+Upload start_server file
+Create service for Laravel
+Create Nginx Config files
+=======================================================================
+nano /etc/nginx/sites-available/your_domain.com.conf
+nano /etc/nginx/sites-available/phpmyadmin.your_domain.com.conf
+
+ln -s /etc/nginx/sites-available/your_domain.com.conf /etc/nginx/sites-enabled/
+ln -s /etc/nginx/sites-available/phpmyadmin.your_domain.com.conf /etc/nginx/sites-enabled/
+=======================================================================
+Verify nginx syntax
+Restart nginx
+Testing Website Visit
+Testing PHPMyAdmin
+Export Tables
+Check Tables in PHPMyAdmin

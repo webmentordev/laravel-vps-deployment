@@ -1,0 +1,20 @@
+$ sudo nano /lib/systemd/system/laravel.service
+
+# Paste following code
+[Unit]
+Description=Laravel Server
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/laravel/
+ExecStart=/root/laravel/start_server.sh
+Restart=on-failure
+RestartSec=10s
+[Install]
+WantedBy=multi-user.target
+
+# 2. Start The Service and Link
+$ sudo systemctl daemon-reload
+$ sudo systemctl start laravel
+$ sudo systemctl enable laravel
